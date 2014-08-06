@@ -3,12 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>simple chat!</title>
+  <style>
+  body {
+    font-family: "游ゴシック", YuGothic, "Lucida Grande", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+  }
+  .txt{
+    height: 50px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    border: 1px solid #CCCCCC;
+  }
+  .btn{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 32px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    outline: 0 none;
+    text-align: center;
+    white-space: nowrap;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    position: relative;
+    background-color: #f8f8f8;
+    border: 1px solid #DDDDDD;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, center top, center bottom, from(#f8f8f8), to(#f1f1f1));
+    background: -moz-linear-gradient(center top, #f8f8f8, #f1f1f1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#f1f1f1', GradientType=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#f1f1f1', GradientType=0)";
+    background: -ms-linear-gradient(to bottom, #f8f8f8, #f1f1f1);
+  }
+  .btn:hover{
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c6c6c6;
+    background-color: #fcfcfc;
+    background: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#f1f1f1));
+    background: -moz-linear-gradient(center top, #fcfcfc, #f1f1f1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1', GradientType=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1', GradientType=0)";
+    background: -ms-linear-gradient(to bottom, #fcfcfc, #f1f1f1);
+  }
+  .btn:active{
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid #c6c6c6;
+    background-color: #fafafa;
+    background: -webkit-gradient(linear, center top, center bottom, from(#fafafa), to(#f1f1f1));
+    background: -moz-linear-gradient(center top, #fafafa, #f1f1f1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f1f1f1', GradientType=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f1f1f1', GradientType=0)";
+    background: -ms-linear-gradient(to bottom, #fafafa, #f1f1f1);
+  }
+  #board, #board li{
+        -ms-transform: scale(-1);
+            transform: scale(-1);
+  }
+  </style>
   <script src="http://cdn.mlkcca.com/v0.2.2/milkcocoa.js"></script>
   <script src="main.js"></script>
 </head>
 <body>
-  <textarea name="" id="msg" cols="30" rows="4"></textarea>
-  <button name="button" onClick="clickEvent()">send message!</button>
-  <div id="board"></div>
+  <textarea class="txt" name="" id="msg" cols="30" rows="4"></textarea>
+  <button class="btn" name="button" onClick="clickEvent()">send message!</button>
+  <ul id="board"></ul>
 </body>
 </html>
