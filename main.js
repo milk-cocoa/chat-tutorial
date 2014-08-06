@@ -7,14 +7,14 @@ window.onload = function(){
 }
 
 function clickEvent(){
-    var text = textArea.value;
-    sendText(text);
-    textArea.value = "";
+  var text = textArea.value;
+  sendText(text);
 }
 
 function sendText(text){
   chatDataStore.push({message : text},function(data){
     console.log("送信完了!");
+    textArea.value = "";
   });
 }
 
@@ -24,6 +24,6 @@ chatDataStore.on("push",function(data){
 
 function addText(text){
   var msgDom = document.createElement("li");
-  msgDom.innerText = text;
+  msgDom.innerHTML = text;
   board.appendChild(msgDom);
 }
