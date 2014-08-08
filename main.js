@@ -23,7 +23,8 @@ chatDataStore.on("push",function(data){
 });
 
 function addText(text){
-  var msgDom = document.createElement("li");
-  msgDom.innerHTML = text;
-  board.appendChild(msgDom);
+  var msgDom = document.createElement("li"),
+      firstNode = board.firstChild;
+  msgDom.innerText = text;
+  board.insertBefore(msgDom, firstNode);
 }
