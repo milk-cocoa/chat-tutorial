@@ -1,4 +1,4 @@
-var milkcocoa = new MilkCocoa("https://io-dhxa654wp.mlkcca.com/");
+var milkcocoa = new MilkCocoa("unii8fmjtlc.mlkcca.com");
 var chatDataStore = milkcocoa.dataStore("chat");
 var textArea, board;
 window.onload = function(){
@@ -12,10 +12,9 @@ function clickEvent(){
 }
 
 function sendText(text){
-  chatDataStore.push({message : text},function(data){
-    console.log("送信完了!");
-    textArea.value = "";
-  });
+  chatDataStore.push({message : text});
+  console.log("送信完了!");
+  textArea.value = "";
 }
 
 chatDataStore.on("push",function(data){
